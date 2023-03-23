@@ -1,0 +1,15 @@
+echo "Enter the file name"
+ read fname
+
+if [ -a $fname ]
+then
+echo "File exists"
+else
+echo "File not found"
+touch $fname
+echo "File $fname created"
+fi
+
+echo "press enter to close"
+ read close
+

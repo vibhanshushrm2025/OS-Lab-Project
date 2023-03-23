@@ -1,0 +1,28 @@
+echo "Enter the number of terms for the fibonacci series"
+ read n
+x=0
+y=1
+echo "Fibonacci series upto $n terms :"
+if [ $n -eq 1 ]
+then
+echo "$x"
+fi
+if [ $n -ge 2 ]
+then
+echo "$x"
+echo "$y"
+fi
+
+i=3
+while [ $i -le $n ]
+do
+    z=`expr $x + $y`
+    echo "$z"
+    x=$y
+    y=$z
+    i=`expr $i + 1`
+done
+
+echo "press enter to close"
+ read close
+
